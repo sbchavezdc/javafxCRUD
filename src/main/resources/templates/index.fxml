@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="480.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sb.tareas.controlador.IndexControlador">
+   <children>
+      <Label layoutX="201.0" layoutY="63.0" text="Sistema de tareas" textFill="#e41e1e">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <TableView fx:id="tareaTabla" layoutX="271.0" layoutY="140.0" onMouseClicked="#seleccionTarea" prefHeight="200.0" prefWidth="326.0">
+        <columns>
+          <TableColumn fx:id="idTareaColumna" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="TareaColumna" prefWidth="75.0" text="Tarea" />
+            <TableColumn fx:id="ResponsableColumna" prefWidth="75.0" text="Responsable" />
+            <TableColumn fx:id="EstatusColumna" prefWidth="75.0" text="Estatus" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="39.0" layoutY="140.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Tarea" textFill="#0051ff" />
+            <Label layoutX="10.0" layoutY="75.0" text="Responsable" textFill="#001eff" />
+            <Label layoutX="14.0" layoutY="126.0" text="Estatus" textFill="#002bff" />
+            <TextField fx:id="nombreTareasTexto" layoutX="14.0" layoutY="42.0" />
+            <TextField fx:id="responsableTextoTarea" layoutX="14.0" layoutY="100.0" />
+            <TextField fx:id="estatusTextoTarea" layoutX="14.0" layoutY="151.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="39.0" layoutY="356.0" prefHeight="94.0" prefWidth="560.0">
+         <children>
+            <Button fx:id="agregarBoton" layoutX="58.0" layoutY="35.0" mnemonicParsing="false" onAction="#agregarTarea" text="Agregar" />
+            <Button fx:id="editarBoton" layoutX="195.0" layoutY="35.0" mnemonicParsing="false" onAction="#modificarTarea" text="Editar" />
+            <Button fx:id="eliminarBoton" layoutX="327.0" layoutY="35.0" mnemonicParsing="false" onAction="#eliminarTarea" text="Eliminar" />
+            <Button fx:id="limpiarboton" layoutX="474.0" layoutY="35.0" mnemonicParsing="false" onAction="#limpiarFormulario" text="Limpiar" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
